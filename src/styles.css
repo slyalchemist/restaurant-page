@@ -1,0 +1,14 @@
+.kitty{
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 12px;
+    border: 8px dotted orange;
+}
+
+.contactName{
+    color: brown;
+    text-align: center;
+}
