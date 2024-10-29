@@ -3,6 +3,7 @@ import "./styles.css";
 import { greeting } from "./greetings.js";
 import { menuConstruct } from "./menuConstruct.js";
 import { contactConstruct } from "./contactConstruct.js";
+import { homeConstruct } from "./homeConstruct.js";
 
 console.log(greeting);
 
@@ -11,7 +12,9 @@ const home = document.getElementById("home");
 const menu = document.getElementById("menu");
 const contact = document.getElementById("contact");
 
-// home.addEventListener("click", homeConstruct);
+homeConstruct();
+
+home.addEventListener("click", homeConstruct);
 menu.addEventListener("click", menuConstruct);
 contact.addEventListener("click", contactConstruct);
 

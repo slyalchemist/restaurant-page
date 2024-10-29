@@ -15,17 +15,18 @@ export function contactConstruct() {
     /*                      */
     /* create contacts here */
     /*                      */
-    const fredBoy = new kittyCreator("fred", "kitty has no phone!", "123 kitty kat lane");
-    const dougBoy = new kittyCreator("doug", "again!", "456 kitty kat lane");
-    const hagen = new kittyCreator("hagen", "actually a dog?", "doggy daycare");
+    const fredBoy = new kittyCreator("fred", "manager", "kitty has no phone!", "fred@kittymail.com");
+    const dougBoy = new kittyCreator("doug", "barista", "again!", "doug@kittymail.com");
+    const hagen = new kittyCreator("hagen", "pastry chef", "actually a dog?", "hagen@doggymail.com");
 
 }
 
 //object constructor to create contacts to minimize code
-function kittyCreator(name, phone, address){
+function kittyCreator(name, position, phone, email){
     this.name = name;
+    this.position = position;
     this.phone = phone;
-    this.address = address;
+    this.email = email;
 
     //container for contact
     const contactContainer = document.createElement("div");
@@ -39,7 +40,7 @@ function kittyCreator(name, phone, address){
         .appendChild(document.createElement("h3"));
     contact.textContent = this.name;
     contact.className = "contactName";
-    contactContainer.appendChild(contactFragment);
+    
 
     //container for contact information
     const infoContact = contactFragment
@@ -47,12 +48,17 @@ function kittyCreator(name, phone, address){
         .appendChild(document.createElement("ul"));
     infoContact.className = "contactInfo";
 
+    //contact position
+    const contactPosition = infoContact.appendChild(document.createElement("li"));
+    contactPosition.textContent = this.position;
+
     //contact phone number
     const contactPhone = infoContact.appendChild(document.createElement("li"));
     contactPhone.textContent = this.phone;
 
-    //contact address
+    //contact email address
     const contactAddress = infoContact.appendChild(document.createElement("li"));
-    contactAddress.textContent = this.address;
+    contactAddress.textContent = this.email;
 
+    contactContainer.appendChild(contactFragment);
 }
