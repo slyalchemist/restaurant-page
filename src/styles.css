@@ -1,14 +1,205 @@
+@import url(https://fonts.bunny.net/css?family=annie-use-your-telescope:400);
+
+:root{
+    --light-accent: rgb(239, 190, 165);
+    --dark-accent: rgb(192, 123, 114);
+    --main-background: rgb(255, 249, 239);
+    --light-contrast: rgb(237, 216, 200);
+    --high-contrast: rgb(84, 52, 53);
+}
+
+body{
+    color: var(--high-contrast);
+    background-color: var(--light-contrast);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-image: url("/re_117358.png");
+    background-size: 100px;
+    background-repeat: space; 
+    font-family: 'Annie Use Your Telescope', handwriting;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+header{
+    width: 100vw;
+    height: 48px;
+    background-color: var(--main-background);
+    border: none;
+    box-shadow: 0 1px 5px var(--main-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    gap: 8px;
+}
+
+button{
+    width: 96px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--light-accent);
+    color: var(--high-contrast);
+    font-weight: 600;
+    font-size: 24px;
+    font-family: 'Annie Use Your Telescope', handwriting;
+    transition-duration: 0.3s;
+}
+
+button:hover{
+    text-decoration: var(--high-contrast) wavy underline;
+    background-color: var(--dark-accent);
+}
+
+h2{
+    font-weight: 400;
+}
+
+h2, h3{
+    text-decoration: var(--high-contrast) wavy underline;
+}
+
+ul{
+    list-style-type: circle;
+}
+
+.homeContainer{
+    width: min(90vw, 640px);
+    height: 85vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-background);
+    border: 4px dashed var(--dark-accent);
+    border-radius: 12px;
+    gap: 8px;
+}
+
+.cafeTitle{
+    margin: 0;
+    font-size: 64px;
+}
+
+.cafeHookContainer{
+    width: 70%;
+    height: 20%;
+    padding: 12px;
+    border: 4px solid var(--dark-accent);
+    border-radius: 12px;
+}
+
+.cafeHoursContainer{
+    width: 70%;
+    height: 20%;
+    border: 4px solid var(--dark-accent);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cafeHoursTitle{
+    align-self: start;
+    margin: 0;
+}
+
+.cafeLocationContainer{
+    width: 70%;
+    height: 20%;
+    border: 4px solid var(--dark-accent);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cafeLocationTitle{
+    align-self: start;
+    margin: 0;
+}
+
+.menuTitle, .menuSubTitle, .contactTitle{
+    background-color: var(--main-background);
+    border: 4px dashed var(--high-contrast);
+    width: min(90vw, 640px);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuTitle, .contactTitle{
+    font-size: 36px;
+    font-weight: 600;
+    height: 48px;
+}
+
+.menuSubTitle{
+    font-size: 24px;
+    height: 36px;
+}
+
+.menuItemContainer{
+    background-color: var(--main-background);
+    border: 2px solid var(--dark-accent);
+    width: min(50vw, 320px);
+    height: 128px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuItemName, .menuItemPrice, .menuItemDescription{
+    margin: 0;
+}
+
 .kitty{
-    background-color: pink;
+    background-color: var(--main-background);
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 12px;
     border-radius: 12px;
-    border: 8px dotted orange;
+    border: 4px dashed var(--high-contrast);
+    width: min(60vw, 480px);
 }
 
 .contactName{
-    color: brown;
+    color: var(--dark-accent);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800; 
+}
+
+.contactPosition{
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer{
     text-align: center;
 }

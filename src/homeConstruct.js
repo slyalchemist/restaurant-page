@@ -9,6 +9,7 @@ export function homeConstruct() {
     
     //title of the restaurant
     const cafeFragment = document.createDocumentFragment();
+    cafeFragment.classList = "cafeTitleContainer";
     const cafe = cafeFragment
         .appendChild(document.createElement("div"))
         .appendChild(document.createElement("h2"));
@@ -18,6 +19,7 @@ export function homeConstruct() {
 
     //cafe hook and author 
     const cafeHookContainer = homeContainer.appendChild(document.createElement("div"));
+    cafeHookContainer.classList = "cafeHookContainer";
     const cafeHook = cafeHookContainer.appendChild(document.createElement("p"));
     cafeHook.textContent = "Don't dive into the nitty gritty, come enjoy a drink with a kitty.";
     cafeHook.classList = "cafeHook";

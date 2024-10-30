@@ -11,6 +11,7 @@ export function menuConstruct() {
         .appendChild(document.createElement("h2"));
     title.textContent = "Menu";
     content.appendChild(titleFragment);
+    title.classList = "menuTitle";
 
     //food menu subsection title
     const sweetFragment = document.createDocumentFragment();
@@ -19,12 +20,14 @@ export function menuConstruct() {
         .appendChild(document.createElement("h3"));
     sweetMenu.textContent = "Sweet Treats";
     content.appendChild(sweetFragment);
+    sweetMenu.classList = "menuSubTitle";
 
     /*                              */
     /* create food menu items here  */
     /*                              */
-
     const croissant = new menuItemCreator("croissant", "3", "a classic pastry");
+    const almondCroissant = new menuItemCreator("almond croissant", "4", "a classic pastry with a twist");
+    const savoryCroissant = new menuItemCreator("ham and cheese croissant", "5", "a savory croissant");
 
     //drink menu subsection title
     const drinkFragment = document.createDocumentFragment();
@@ -33,11 +36,14 @@ export function menuConstruct() {
         .appendChild(document.createElement("h3"));
     drinkMenu.textContent = "Cafe Drinks";
     content.appendChild(drinkFragment);
+    drinkMenu.classList = "menuSubTitle";
 
     /*                              */
     /* create drink menu items here */
     /*                              */
     const matcha = new menuItemCreator("matcha", "4", "an earthy green drink");
+    const latte = new menuItemCreator("classic latte", "4", "a drink with espresso and milk");
+    const hojicha = new menuItemCreator("hojicha latte", "4", "a latte with roasted tea leaves and milk");
 
 }
 
@@ -59,6 +65,7 @@ function menuItemCreator(name, price, description){
         .appendChild(document.createElement("h4"));
     menuItemName.textContent = this.name;
     menuItemContainer.appendChild(menuFragment);
+    menuItemName.classList = "menuItemName";
 
     //container for menu item price and description
     const itemContainer = document.createElement("div");

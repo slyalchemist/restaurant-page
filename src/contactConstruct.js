@@ -10,14 +10,15 @@ export function contactConstruct() {
         .appendChild(document.createElement("div"))
         .appendChild(document.createElement("h2"));
     title.textContent = "Contact";
+    title.classList = "contactTitle";
     content.appendChild(titleFragment);
 
     /*                      */
     /* create contacts here */
     /*                      */
-    const fredBoy = new kittyCreator("fred", "manager", "kitty has no phone!", "fred@kittymail.com");
-    const dougBoy = new kittyCreator("doug", "barista", "again!", "doug@kittymail.com");
-    const hagen = new kittyCreator("hagen", "pastry chef", "actually a dog?", "hagen@doggymail.com");
+    const fredBoy = new kittyCreator("fred", "manager", "555-555-5554", "fred@kittymail.com");
+    const dougBoy = new kittyCreator("doug", "barista", "555-555-5555", "doug@kittymail.com");
+    const hagen = new kittyCreator("hagen", "pastry chef", "555-555-5556", "hagen@doggymail.com");
 
 }
 
@@ -51,6 +52,7 @@ function kittyCreator(name, position, phone, email){
     //contact position
     const contactPosition = infoContact.appendChild(document.createElement("li"));
     contactPosition.textContent = this.position;
+    contactPosition.classList = "contactPosition";
 
     //contact phone number
     const contactPhone = infoContact.appendChild(document.createElement("li"));
