@@ -38,6 +38,7 @@ export function menuConstruct() {
     content.appendChild(drinkFragment);
     drinkMenu.classList = "menuSubTitle";
 
+    
     /*                              */
     /* create drink menu items here */
     /*                              */
